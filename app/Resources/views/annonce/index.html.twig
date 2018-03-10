@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="form-group col-md-3 col-md-offset-3 col-lg-3 col-lg-offset-3" >
+            <br>
+            {% for annonce in annonces %}
+                <a href="{{ path('annonce_show',{'id':annonce.id}) }}" class="list-group-item">
+                    <small>{{ annonce.ville }}</small>
+                    <br>
+                    <small>{{ annonce.dateDebut|date('d/m/Y') }}
+                    <br>
+                    <small>{{ annonce.dateFin|date('d/m/Y') }}
+                    <br>
+                    <small> {{ 'annonce.text.duree'|trans }} jours</small>
+                    <br>
+                    <small>{{ annonce.prixPersonne }} euros </small>
+                    <br>
+                    <small>{{ 'annonce.text.place_dispo'|trans }}{{ annonce.nbPlaceDispo - annonce.nbPlaceReservee }}</small>
+
+                </a>
+                <br>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,4 @@
+services:
+#    coloc_user.example:
+#        class: ColocUserBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

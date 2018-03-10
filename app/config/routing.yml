@@ -1,0 +1,15 @@
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+login:
+    path: /login
+    defaults:
+        _controller: ColocUserBundle:Security:login
+
+login_check:
+    path: /login_check
+
+logout:
+    path: /logout
